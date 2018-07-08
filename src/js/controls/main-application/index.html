@@ -1,0 +1,31 @@
+<!-- <nav class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#landmark-menu" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar">blabla</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div id="landmark-menu" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                
+            </ul>
+        </div>
+        
+    </div>
+</nav> -->
+<div class="container">
+    <div class="row" style="margin-top: -20px;">
+        <span data-bind="if: active() === 'homepage'">
+            <c-homepage params="context: context" class="container"></c-homepage>
+        </span>
+        <span data-bind="if: active() === 'managerwindow'">
+            <c-managerwindow params="context: context" class="container"></c-managerwindow>
+        </span>
+        <span data-bind="if: active() === 'workerwindow'">
+            <c-workerwindow params="context: context" class="container"></c-workerwindow>
+        </span>
+    </div>
+</div>

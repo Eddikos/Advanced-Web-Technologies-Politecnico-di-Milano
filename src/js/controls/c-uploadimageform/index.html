@@ -1,0 +1,19 @@
+<div data-bind="if: ready" >
+	<h3>Upload Image</h3>
+	<form>
+	    <div class="form-group" data-bind="css: {'has-error': errors()['image']}">
+		    <div class="row">
+		    	<div class="col-md-8">
+		    		<input id="uploadimageform_field_0" data-bind="value: fields()['image']" type="file" class="form-control validate" aria-describedby="uploadimageform_field_0_error">
+		        	<span id="uploadimageform_field_0_error" class="help-block" data-bind="text: errors()['image']"></span>
+		    	</div>
+		    	<div class="col-md-4">
+		    		<a class="btn btn-primary" data-bind="click: trigger.bind($data, 'uploadbutton')" style="position: absolute; right: 13px;">Upload Image</a>
+		    	</div>
+		    </div>
+	        <!-- <label for="uploadimageform_field_0" data-bind="css: {active: fields()['image']}, attr: {'data-error': errors()['image']}" class="control-label">image</label> -->
+	        
+	    </div>
+	</form>
+</div>
+

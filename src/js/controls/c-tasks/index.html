@@ -1,0 +1,16 @@
+<h3>Task List</h3>
+<table class="table table-hover table-condensed">
+    <thead>
+        <tr>
+            <th>Task</th>
+            <th>Type</th>
+        </tr>
+    </thead>
+    <tbody data-bind="foreach: items">
+        <tr data-bind="click: $parent.select, css: {'info': $parent.selected() === id}" style="cursor: pointer;">
+            <td data-bind="text: 'Task ' + ($index() + 1)" style="white-space: pre-wrap;"></td>
+            <td data-bind="text: $data['type']" style="white-space: pre-wrap;"></td>
+        </tr>
+    </li>
+    </tbody>
+</table>

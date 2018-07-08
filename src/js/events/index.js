@@ -1,0 +1,41 @@
+/*jslint node: true, nomen: true */
+"use strict";
+
+exports.createEvents = function (options) {
+    return {
+        'managerlogout': require('./managerlogout').createEvent(options)
+        ,'workerlogout': require('./workerlogout').createEvent(options)
+        ,'loginbutton': require('./loginbutton').createEvent(options)
+        ,'onregistrationtrigger': require('./onregistrationtrigger').createEvent(options)
+        ,'afterregistration': require('./afterregistration').createEvent(options)
+        ,'onchnagescancel': require('./onchnagescancel').createEvent(options)
+        ,'savechnages': require('./savechnages').createEvent(options)
+        ,'onchangesfinish': require('./onchangesfinish').createEvent(options)
+        ,'onchnagescancel': require('./onchnagescancel').createEvent(options)
+        ,'savechanges': require('./savechanges').createEvent(options)
+        ,'cancelchanges': require('./cancelchanges').createEvent(options)
+        ,'onfinish': require('./onfinish').createEvent(options)
+        ,'createcampaignbutton': require('./createcampaignbutton').createEvent(options)
+        ,'campaignlist-selected': require('./campaignlist-selected').createEvent(options)
+        ,'reloadcampaignslist': require('./reloadcampaignslist').createEvent(options)
+        ,'startcampaign': require('./startcampaign').createEvent(options)
+        ,'campaignparameterschange': require('./campaignparameterschange').createEvent(options)
+        ,'endisannotation': require('./endisannotation').createEvent(options)
+        ,'endisselection': require('./endisselection').createEvent(options)
+        ,'uploadbutton': require('./uploadbutton').createEvent(options)
+        ,'imagelistreload': require('./imagelistreload').createEvent(options)
+        ,'taskdetailsbinding': require('./taskdetailsbinding').createEvent(options)
+        ,'startsessionbutton': require('./startsessionbutton').createEvent(options)
+        ,'loginmanager': require('./loginmanager').createEvent(options)
+        ,'save': require('./save').createEvent(options)
+        ,'reload': require('./reload').createEvent(options)
+        ,'afterlogout': require('./afterlogout').createEvent(options)
+        ,'onimageselect': require('./onimageselect').createEvent(options)
+        ,'deleteimage': require('./deleteimage').createEvent(options)
+        ,'reloadimages': require('./reloadimages').createEvent(options)
+        ,'reloadworkerslist': require('./reloadworkerslist').createEvent(options)
+        ,'workerlogin': require('./workerlogin').createEvent(options)
+        ,'sendresultsbutton': require('./sendresultsbutton').createEvent(options)
+        ,'getnextinstancebutton': require('./getnextinstancebutton').createEvent(options)
+    };
+};

@@ -1,0 +1,23 @@
+<h3>Image List</h3>
+<p data-bind="ifnot: ready"><i>* Press on the image to see image details</i></p>
+<table class="table table-hover table-condensed">
+<!--     <thead>
+        <tr>
+            <th>canonical</th>
+            <th>id</th>
+            <div>
+                <th data-bind="if: ready">Action</th>
+            </div>
+        </tr>
+    </thead> -->
+    <tbody data-bind="foreach: items">
+        <tr data-bind="click: $parent.select, css: {'info': $parent.selected() === id}" style="cursor: pointer;">
+            <td style="white-space: pre-wrap;">
+                <img width="200px" height="200px" data-bind="attr:{src: $data['canonical']}" data-toggle="modal" data-target="#imageDetails" />
+                <span data-bind="if: $parent.ready" style="position: relative; top: -200px; right: -160px;"><a class="btn btn-danger" data-bind="click: $parent.trigger.bind($data, 'deleteimage'), clickBubble: false"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a></span>
+            </td>
+            <!-- <td data-bind="text: $data['id']" style="white-space: pre-wrap;"></td> -->            
+        </tr>
+    </li>
+    </tbody>
+</table>

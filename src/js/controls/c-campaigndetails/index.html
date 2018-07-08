@@ -1,0 +1,38 @@
+<div data-bind="if: item">
+    <h3 style="margin-bottom: 25px">Campaign "<span data-bind="text: item()['name']"></span>" (<span id="campaignStatus" data-bind="text: item()['status']"></span>)</h3>
+    <!-- <dl class="dl-horizontal">
+        <dt>ID:</dt>
+        <dd data-bind="text: item()['id']"></dd>
+        <dt>Name:</dt>
+        <dd></dd>
+        <dt>Status:</dt>
+        <dd ></dd>
+        <dt>Annotation Replica:</dt>
+        <dd data-bind="text: item()['annotation_replica']"></dd>
+        <dt>Annotation Size:</dt>
+        <dd data-bind="text: item()['annotation_size']"></dd><br/>
+        <dt>Selection Replica:</dt>
+        <dd data-bind="text: item()['selection_replica']"></dd>
+        <dt>Threshold:</dt>
+        <dd data-bind="text: item()['threshold']"></dd>
+
+        <dt>execution</dt>
+        <dd data-bind="text: item()['execution']"></dd>
+        <dt>image</dt>
+        <dd data-bind="text: item()['image']"></dd>
+        <dt>statistics</dt>
+        <dd data-bind="text: item()['statistics']"></dd>
+        <dt>worker</dt>
+        <dd data-bind="text: item()['worker']"></dd>
+    </dl> -->
+</div>
+<div class="row" style="float:right; margin: -50px 5px 0px 0px">
+    <div data-bind="if: ready">
+        <a class="col-xs-2 btn btn-success" data-bind="click: trigger.bind($data, 'startcampaign')">Start Campaign</a>
+    </div>
+    <div data-bind="if: started">
+        <a class="col-xs-2 btn btn-danger" data-bind="click: trigger.bind($data, 'startcampaign')">Terminate Campaign</a>
+    </div>
+    
+    <!-- <a class="col-xs-2 btn btn-primary" data-bind="click: trigger.bind($data, 'campaignparameterschange')">Change Parameters</a> -->
+</div>

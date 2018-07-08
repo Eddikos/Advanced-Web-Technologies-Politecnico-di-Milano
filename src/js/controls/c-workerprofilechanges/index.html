@@ -1,0 +1,30 @@
+
+    <form>
+        <div class="form-group" data-bind="css: {'has-error': errors()['fullname']}">
+            <div class="row">
+                <div class="col-md-4">
+                    <label for="workerprofilechanges_field_0" data-bind="css: {active: fields()['fullname']}, attr: {'data-error': errors()['fullname']}" class="control-label">Full Name:</label>
+                </div>
+                <div class="col-md-8">
+                    <input id="workerprofilechanges_field_0" data-bind="value: fields()['fullname']" type="text" class="form-control validate" aria-describedby="workerprofilechanges_field_0_error">
+                    <span id="workerprofilechanges_field_0_error" class="help-block" data-bind="text: errors()['fullname']"></span>
+                </div>
+            </div>
+        </div>
+        <div class="form-group" data-bind="css: {'has-error': errors()['password']}">
+            <div class="row">
+                <div class="col-md-4">
+                    <label for="workerprofilechanges_field_1" data-bind="css: {active: fields()['password']}, attr: {'data-error': errors()['password']}" class="control-label">New Password:</label>
+                </div>
+                <div class="col-md-8">
+                    <input id="workerprofilechanges_field_1" data-bind="value: fields()['password']" type="text" class="form-control validate" aria-describedby="workerprofilechanges_field_1_error">
+                    <span id="workerprofilechanges_field_1_error" class="help-block" data-bind="text: errors()['password']"></span>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+<div class="modal-footer">
+    <a class="col-md-2 col-md-offset-8 btn btn-danger" data-bind="click: trigger.bind($data, 'cancelchanges')" data-dismiss="modal">Cancel</a>
+    <a class="col-xs-2 btn btn-success" data-bind="click: trigger.bind($data, 'savechanges')" data-dismiss="modal"><span class="glyphicon glyphicon-floppy-disk" area-hidden="true"></span> Save</a>

@@ -1,0 +1,30 @@
+<!-- Modal -->
+<div class="modal fade" id="nextTask" tabindex="-1" role="dialog" aria-labelledby="myNextTask" >
+        <div class="modal-dialog" role="document" style="margin-left: 275px;">
+                <div class="modal-content" style="width: 800px">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myNextTask">Next Task</h4>
+                      </div>
+                        <div class="modal-body">
+                                <dl class="dl-horizontal" data-bind="if: size">
+                                    <line-drawer params="context:context,src: image, pen: size, line: line"></line-drawer><br/>
+                                    <div class="row" style="text-align: center; padding-top: 15px;">
+                                        <a class="col-xs-2 btn btn-danger" data-bind="click: clear.bind($data)" style="margin-left: 41%; margin-right: 8px;">Clear</a>&nbsp;&nbsp;&nbsp;
+                                        <a class="col-xs-2 btn btn-success" data-bind="click: trigger.bind($data, 'sendresultsbutton',undefined)">Send</a>
+                                    </div>
+                                </dl>
+                                <dl class="dl-horizontal" data-bind="if: !size()">      
+                                    <dd><img width="400px" height="400px" data-bind="attr:{src: image}" /></dd><br/>
+                                    <div class="row" style="padding-top: 15px;">
+                                        <a class="col-xs-2 btn btn-danger" data-bind="click: trigger.bind($data, 'sendresultsbutton',false)" style="margin-left: 41%; margin-right: 8px;">Reject</a>&nbsp;&nbsp;&nbsp;
+                                        <a class="col-xs-2 btn btn-success" data-bind="click: trigger.bind($data, 'sendresultsbutton',true)">Accept</a>
+                                    </div>
+                                </dl>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                      </div>
+                </div>
+        </div>
+</div>

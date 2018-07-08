@@ -1,0 +1,19 @@
+<h3>Task Statistics</h3>
+<table class="table" data-bind="if: item">
+	<tr>
+		<td>Available</td>
+		<td data-bind="text: item()['available']"></td>
+	</tr>
+	<tr>
+		<td>Annotated</td>
+		<td data-bind="text: item()['annotated']"></td>
+	</tr>
+	<tr>
+		<td>Accepted</td>
+		<td data-bind="text: item()['accepted']"></td>
+	</tr>
+	<tr>
+		<td>Rejected</td>
+		<td data-bind="text: item()['rejected']"></td>
+	</tr>
+</table>

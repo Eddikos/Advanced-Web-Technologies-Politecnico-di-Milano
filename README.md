@@ -1,2 +1,11 @@
-# Advanced-Web-Technologies-Politecnico-di-Milano
-A Master's project course where we used a Model-first approach to develop the front-end with Knockout.js of the application built in Node.js
+AWT Project
+===
+
+ALASGAROV ELDAR
+872019
+
+If you want to use existing users:
+
+Admin: john_is_the_best --> 1313131313 (password)
+User1: eddikos --> 12345678 (password)
+User2: eldar --> 12345678 (password)

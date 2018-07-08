@@ -1,0 +1,11 @@
+
+<div data-bind="if: item" style="text-align: center">
+	<h3>Task: <span data-bind="text: item()['type']"></span></h3>
+</div>
+<div class="row" data-bind="ifnot: visible">
+    <h4 style="text-align: center">Task is Finished</h4>
+</div>
+<div class="row" data-bind="if: visible">
+	<h4 style="text-align: center">Task is still Open</h4>
+    <a class="col-xs-2 btn btn-success" data-bind="click: trigger.bind($data, 'startsessionbutton')" style="margin-left: 135px;"  data-toggle="modal" data-target="#nextTask" >Start Session</a>
+</div>

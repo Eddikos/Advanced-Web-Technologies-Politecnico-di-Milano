@@ -1,0 +1,21 @@
+<div data-bind="if: visible" >
+	<h3 style="margin-top: 0px; text-align: center">Campaign Statistics</h3>
+	<table data-bind="if: item" cellspacing="10" cellpadding="10" class="table">
+		<tr>
+			<th>Number of images</th>
+			<td data-bind="text: item()['images']"></td>
+		</tr>
+		<tr>
+			<th>Number of accepted images</th>
+			<td data-bind="text: item()['accepted']"></td>
+		</tr>
+		<tr>
+			<th>Number of annotated images</th>
+			<td data-bind="text: item()['annotation']"></td>
+		</tr>
+		<tr>
+			<th>Number of rejected images</th>
+			<td data-bind="text: item()['rejected']"> </td>
+		</tr>
+	</table>
+</div>

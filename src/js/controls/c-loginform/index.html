@@ -1,0 +1,29 @@
+<h3 style="margin-bottom: 30px">Login</h3>
+<form>
+    <div class="form-group" data-bind="css: {'has-error': errors()['username']}">
+        <div class="row">
+            <div class="col-md-3">
+                <label for="loginform_field_1" data-bind="css: {active: fields()['username']}, attr: {'data-error': errors()['username']}" class="control-label">Username</label>
+            </div>
+            <div class="col-md-9">
+                <input id="loginform_field_1" data-bind="value: fields()['username']" type="text" class="form-control validate" aria-describedby="loginform_field_1_error">
+                <span id="loginform_field_1_error" class="help-block" data-bind="text: errors()['username']"></span>
+            </div>
+        </div>
+    </div>
+    <div class="form-group" data-bind="css: {'has-error': errors()['password']}">
+        <div class="row">
+            <div class="col-md-3">
+                <label for="loginform_field_0" data-bind="css: {active: fields()['password']}, attr: {'data-error': errors()['password']}" class="control-label">Password</label>
+            </div>
+            <div class="col-md-9">
+                <input id="loginform_field_0" data-bind="value: fields()['password']" type="password" class="form-control validate" aria-describedby="loginform_field_0_error">
+                <span id="loginform_field_0_error" class="help-block" data-bind="text: errors()['password']"></span>
+            </div>
+        </div>
+    </div>
+</form>
+<div class="row">
+    <p  class="help-block" style="color:red" data-bind="text: error"></p>
+    <a class="col-xs-2 btn btn-primary" style="margin-left: 15px" data-bind="click: trigger.bind($data, 'loginbutton')">Login</a>
+</div>

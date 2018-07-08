@@ -1,0 +1,41 @@
+<!-- Modal -->
+<div class="modal fade" id="imageDetails" tabindex="-1" role="dialog" aria-labelledby="myImageDetails" >
+        <div class="modal-dialog" role="document" style="margin-left: 275px;">
+                <div class="modal-content" style="width: 800px">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myImageDetails">Image Details</h4>
+                      </div>
+                        <div class="modal-body" data-bind="if: item">
+                                <div class="row">
+                                        <div class="col-md-8">
+                                                <line-drawer width="500" params="context:context, src: item()['canonical'], pen: size, line: line"></line-drawer>
+                                        </div>
+                                        <div class="col-md-4">
+                                                <table class="table table-hover" data-bind="foreach: item()['annotation']">
+                                                        
+                                                        <tr>
+                                                                <td >Annotation <span data-bind="text: ($index() + 1)"></td>
+                                                                <td><button data-bind="click: $parent.select($data)" class="btn btn-success">Show</button></td>
+                                                        </tr>
+                                                      
+                                                </table>
+                                                <table class="table">
+                                                        <tr>
+                                                                <th>No. Accepted:</th>
+                                                                <td data-bind="text: item()['selection']['accepted']"></td>
+                                                        </tr>
+                                                        <tr>
+                                                                <th>No. Rejected:</th>
+                                                                <td data-bind="text: item()['selection']['rejected']"></td>
+                                                        </tr>
+                                                </table>
+                                        </div>      
+                                </div>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                      </div>
+                </div>
+        </div>
+</div>

@@ -1,0 +1,19 @@
+<h3>Worker Infos</h3>
+<dl class="dl-horizontal" data-bind="if: item">
+        <dt>annotation</dt>
+        <dd data-bind="text: item()['annotation']"></dd>
+        <dt>annotator</dt>
+        <dd data-bind="text: item()['annotator']"></dd>
+        <dt>fullname</dt>
+        <dd data-bind="text: item()['fullname']"></dd>
+        <dt>id</dt>
+        <dd data-bind="text: item()['id']"></dd>
+        <dt>selection</dt>
+        <dd data-bind="text: item()['selection']"></dd>
+        <dt>selector</dt>
+        <dd data-bind="text: item()['selector']"></dd>
+</dl>
+<div class="row">
+    <a class="col-xs-2 btn btn-primary" data-bind="click: trigger.bind($data, 'endisannotation')">Enable / Disable Annotation</a>
+    <a class="col-xs-2 btn btn-primary" data-bind="click: trigger.bind($data, 'endisselection')">Enable / Disable Selection</a>
+</div>
